@@ -25,3 +25,9 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
         run: python usdchf_bot.py
+
+      - name: Upload signals log
+        uses: actions/upload-artifact@v3
+        with:
+          name: usdchf_signals
+          path: usdchf_signals.csv
